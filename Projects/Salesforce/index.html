@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <head> <meta name="viewport" content="width=device-width, user-scalable=no" /></head>
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
+<style type="text/css">
+    a.fancybox img {
+        border: none;
+        box-shadow: 0 1px 7px rgba(0,0,0,0.6);
+        -o-transform: scale(1,1); -ms-transform: scale(1,1); -moz-transform: scale(1,1); -webkit-transform: scale(1,1); transform: scale(1,1); -o-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;
+    }
+    a.fancybox:hover img {
+        position: relative; z-index: 999; -o-transform: scale(1.03,1.03); -ms-transform: scale(1.03,1.03); -moz-transform: scale(1.03,1.03); -webkit-transform: scale(1.03,1.03); transform: scale(1.03,1.03);
+    }
+</style>
+
+
+
+
+</head>
+<style>
+
+@font-face{
+
+    font-family:'lettergothic';
+    src: url("fonts/lettergothicstd.ttf");
+}
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #fff #fff;
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #283647;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif,lettergothic"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #fff;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #035995;
+    border-radius: 5px;
+    line-height: 1;
+    font-family: "Helvetica"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: #fff;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #007eb9;
+    border-radius: 5px;
+    line-height: 1;
+    font-family: "Helvetica"
+
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #fff ;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #fff;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #035995;
+    border-radius: 5px;
+    line-height: 1;
+    font-family: "Helvetica"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 5px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+html body .ui-group-theme-c .ui-btn{
+background: #fff;
+border-color: #283647;
+color: #000;
+border-radius: 10px;
+
+}
+
+html body .ui-group-theme-c .ui-btn:visited, html body .ui-btn.ui-btn-c:visited {
+  background: #f2f2f2;
+    border-color: #283647;
+    color: #000;
+}
+
+
+.ui-btn-icon-left::after, .ui-btn-icon-right::after, .ui-btn-icon-top::after, .ui-btn-icon-bottom::after, .ui-btn-icon-notext::after {
+    background-color: #f2f2f2;
+    background-color: #0582b7;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 10em;
+    border-radius: 10em;
+}
+
+
+html .ui-page-theme-a,html .ui-page-theme-e{
+  background: #283647;
+}
+
+html .ui-bar-c{
+  background: #283647;
+  border-color: #283647;
+  color: silver;
+}
+
+html .ui-page-theme-e .ui-btn{
+  background: #035995;
+  border-color:#f7f7f7;
+  color: #fff;
+  margin: 5px;
+  border-radius: 5rem;
+}
+
+html .ui-body-e, html .ui-page-theme-e .ui-body-inherit, html .ui-bar-e .ui-body-inherit, html .ui-body-e .ui-body-inherit, html body .ui-group-theme-e .ui-body-inherit, html .ui-panel-page-container-e{
+  background: #fff;
+  border-color: #457b87;
+  color: #333;
+  border-radius: 10rem;
+}
+
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+    color: #000;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 105%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+
+    }
+
+
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap {
+    white-space: normal !important;
+	text-align: left;
+}
+
+
+pre {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+ background:#fee6b0;
+ font-size: 13px;
+     overflow: auto;
+}
+
+
+</style>
+
+<body>
+
+
+<div data-role="page" id="pageone">
+  <div data-role="content">
+  <div class="my-wrapper" >
+    <ul data-role="listview" data-autodividers="false" data-inset="true" data-filter="true" data-theme="c" data-filter-placeholder="Search..." data-filter-theme="e">
+
+<li><a href="#eps1" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Introduction</h2><p style="color:#00a1e0;">Why should you learn Salesforce?</p></a></li>
+<li><a href="#eps2" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Overview</h2><p style="color:#00a1e0;">Customer Relationship Management</p></a></li>
+<li><a href="#eps3" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Architecture</h2><p style="color:#00a1e0;">Layer representation</p></a></li>
+<li><a href="#eps4" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Environment</h2><p style="color:#00a1e0;">Setup your environment</p></a></li>
+<li><a href="#eps5" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Sales Cloud</h2><p style="color:#00a1e0;">Key features of sales cloud</p></a></li>
+<li><a href="#eps6" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Service Cloud</h2><p style="color:#00a1e0;">Key Features of service cloud</p></a></li>
+<li><a href="#eps7" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Navigating Setup</h2><p style="color:#00a1e0;">Setup Location,Setup Home,Setup Options</p></a></li>
+<li><a href="#eps8" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Salesforce Objects - Standard Objects</h2><p style="color:#00a1e0;">Schema builder</p></a></li>
+<li><a href="#eps9" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Salesforce Objects - Custom Objects</h2><p style="color:#00a1e0;">Object manager</p></a></li>
+<li><a href="#eps10" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Salesforce Objects - Master Detail</h2><p style="color:#00a1e0;">Features of Master Detail Relationship</p></a></li>
+<li><a href="#eps11" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Salesforce Objects - Lookup Relationship</h2><p style="color:#00a1e0;">Lookup Relationship</p></a></li>
+<li><a href="#eps12" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Salesforce Objects - Schema Builder</h2><p style="color:#00a1e0;">Accessing Schema Builder</p></a></li>
+<li><a href="#eps13" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Data Security - Control Access Org</h2><p style="color:#00a1e0;">Create and Manage Users</p></a></li>
+<li><a href="#eps14" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Data Security - Control Access Objects</h2><p style="color:#00a1e0;">Creating a Permission Set</p></a></li>
+<li><a href="#eps15" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Data Security - Control Access Fields</h2><p style="color:#00a1e0;">Manage Field Permissions</p></a></li>
+<li><a href="#eps16" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Data Security - Control Access Records</h2><p style="color:#00a1e0;">Record Ownership,Restriction Mechanism</p></a></li>
+<li><a href="#eps17" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Data Security - Create a Role Hierarchy</h2><p style="color:#00a1e0;">Setup Roles and more</p></a></li>
+<li><a href="#eps18" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Data Security - Define Sharing Rules</h2><p style="color:#00a1e0;">Create Sharing Rules</p></a></li>
+<li><a href="#eps19" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Process Builder - Automate Business Processes</h2><p style="color:#00a1e0;">Process Automation</p></a></li>
+<li><a href="#eps20" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Process Builder - Importing Data</h2><p style="color:#00a1e0;">Import your data into Salesforce</p></a></li>
+<li><a href="#eps21" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Process Builder - Exporting Data</h2><p style="color:#00a1e0;">Schedule data export</p></a></li>
+<li><a href="#eps22" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Process Builder - Reports</h2><p style="color:#00a1e0;">Create new report</p></a></li>
+<li><a href="#eps23" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Process Builder - Dashboards</h2><p style="color:#00a1e0;">Add components to Dashboard</p></a></li>
+<li><a href="#eps25" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Visualforce - Visualforce Pages</h2><p style="color:#00a1e0;">Create a Visualforce Page</p></a></li>
+<li><a href="#eps24" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Process Builder - Using Formula Fields</h2><p style="color:#00a1e0;">Setup custom fields</p></a></li>
+<li><a href="#eps26" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Visualforce - Variables & Formulas</h2><p style="color:#00a1e0;">Expressions, operators and literals</p></a></li>
+<li><a href="#eps28" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Visualforce - Records, Fields & Tables</h2><p style="color:#00a1e0;">Display output</p></a></li>
+<li><a href="#eps27" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Visualforce - Standard Controllers</h2><p style="color:#00a1e0;">Use of Standard Controller</p></a></li>
+<li><a href="#eps29" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Visualforce - Using Forms</h2><p style="color:#00a1e0;">Create Input Form</p></a></li>
+<li><a href="#eps30" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Visualforce - List Controllers</h2><p style="color:#00a1e0;">Account,Asset,Campaign,Case and more</p></a></li>
+<li><a href="#eps31" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Visualforce - Static Resources</h2><p style="color:#00a1e0;">Create a Static Resource container</p></a></li>
+<li><a href="#eps33" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Lightning Components - Create & Edit Lightning Components</h2><p style="color:#00a1e0;">Create & Edit Lightning Components</p></a></li>
+<li><a href="#eps34" data-transition="flip"><img src="icon/icon.jpg" class="image"><h2 class="wrap">Lightning Components - Attributes & Expressions</h2><p style="color:#00a1e0;">Regular Attributes & Expressions</p></a></li>
+
+
+
+
+</ul>
+  </div> </div>
+</div>
+
+
+
+
+
+
+<div data-role="page" id="eps1" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Introduction</h1>
+
+<p>Salesforce is a leading CRM(<strong>C</strong>ustomer <strong>R</strong>elationship <strong>M</strong>anagement) software which is served form cloud. It has more than 800 applications to support various features like generating new leads, acquire ne leads, increase sells and close deals faster. It is designed to manage the organization's data focused on customer and sales details. It also offers features to customize it's inbuilt data structures and GUI to suit the specific needs of a business. More recently it has started offering IOT (internet of things) connectivity to the CRM platform.</p><h1>Audience</h1><p>Anyone who manages sales and customer relationship will find this software highly useful as an end user. Also Software developers and cloud computing enthusiast who wants to learn customizing these software for specific business needs.</p><h1>Prerequisites</h1><p>Some knowledge of cloud computing is essential to understand the environment and it's architecture. Knowledge of databases is essential to understand how the data is stored, retrieved and manipulated.</p>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps2" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Overview</h1>
+
+<div><div><div><div><div><br /><hr /><p>As Salesforce started as a cloud based solution for CRM, lets understand some details about CRM. <strong>CRM</strong> stands for Customer Relationship Management. It involves managing all aspects of relationship between an organization and its customers. For example the contact details of the customer, the deals that are in progress or already completed, The support requests from a customer or a new lead from a new customer. Beyond the customer related information it also involves storing and managing the details of the people and department from the seller organization who is managing the customer&rsquo;s account and needs. This makes it easy to manage and enhance the relationship with the customer and hence better growth for the organization.</p><p>To achieve all the above the Salesforce platform has the following features</p><ul><li><strong>Contact Management</strong> - To view customer contact details, activity history, customer communications, and internal account discussions etc. In short it manages all the data pertaining to the contact with a customer.</li><li><strong>Opportunity Management</strong> - It provides the details of the stage a deal is in, what products are involved in the deal, the quote in the deal etc. In short it manages all the data that helps in identifying, progressing and closing a deal.</li><li><strong>Salesforce Engage</strong> - This feature is focused on making personalized contact with a customer for various campaigns designed by marketing team. It also provides real-time sales alerts based on the level of engagement with a customer.</li><li><strong>Sales Collaboration</strong> - This feature helps in quickly finding experts who can help in closing a deal based on customer queries and feedback. In short, it helps in bringing in a collaborative effort to engage an entire team in the deal and make the deal happen.</li><li><strong>Sales Performance Management</strong> - It provides a metric-based goal settings, continuous feedback and rewards and recognition for the sales team. Which in turn helps in a better management of the performance of the sales team.</li><li><strong>Lead Management</strong> - To initiate and track the leads that are in progress. Also help in continually optimizing campaigns across every channel.</li><li><strong>Partner Management</strong> - Build a community with partners. Connect directly with channel partners to share goals, objectives, and activities.</li><li><strong>Salesforce Mobile App</strong> - This is the mobile platform to carry out all the above activities in a mobile platform.</li><li><strong>Workflow and Approvals</strong> - It is a visual design to automate the business processes. The interface provides simple drag and drop options to make this design. It helps in creating a flexible approval process with deal discounts and expense management etc.</li><li><strong>Email Integration</strong> - Salesforce can integrate to an existing email platform providing flexibility to the existing team with no additional learning curve.</li><li><strong>Files Sync and Share</strong> - This feature provides the sales team the power to easily share various files, discuss them and update them as needed. Also receive alerts when something in the file changes.</li><li><strong>Reports and Dashboards</strong> - Dashboards offer a real-time picture of the business at a glance. Also anyone can create detailed reports which can be accessed from anywhere.</li><li><strong>Sales Forecasting</strong> - This feature helps in getting a real time view of the forecast of a sales team. It provides multi-currency support and in-line editing mode to manage the sales forecast well.</li><li><strong>Territory Management</strong> - This feature is used to create multiple territory models, preview them before rollout, and continually optimize and balance territories throughout the year.</li></ul><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps3" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Architecture</h1>
+
+<div><div><div><div><div><br /><hr /><p>Salesforce delivers a highly customized experience to the customers, employees, and partners of an organization. Such a platform is used to customize standard functionality and create custom pages, components, apps etc. Also it is done faster, mainly because of the superb architecture on which it is built. Below is a brief introduction to the Salesforce Architecture.</p><img src="images/sf_architecture.png" alt="" /><h2>Architecture Layers</h2><p>The architecture can be understood easily by imagining it to be layers of software on top of each other and communicating among themselves. The picture below represents those layers. The purpose and function of each layer is described below it.</p><ul><li><strong>Trusted Multitenant Cloud: </strong> Here multiple instances of one or multiple applications operate independently in a shared environment. The instances are referred as tenants and they logically separate from each other while physically remain in the same hardware. It is called trusted because of both its robust nature and high security.</li><li><strong>Scalable Metadata Platform: </strong> The metadata driven platform makes it easy for customization and scaling up as the amount of data or concurrent user instances increases.</li><li><strong>Enterprise Ecosystem: </strong> Its Enterprise Ecosystem is very large as large number of partners contributes by creating and maintaining applications in this platform.</li><li><strong>CRM and Related Functionality: </strong> Salesforce include all aspect of CRM in its list of features and also extends it by providing features for creation of apps and integrating analytics etc.</li><li><strong>APIs: </strong>Salesforce provides powerful suite of APIs, which helps to develop and customize the Salesforce1 Mobile App.</li></ul><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps4" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Environment</h1>
+
+<div><div><div><div><div><br /><hr /><p>As Salesforce is a cloud based system it does not need any software installation on your part. You can simple signup for a free trial and get started. The free trial account provides nearly all features which you need to learn the basics of Salesforce platform. Below are the steps to get started with the Salesforce environment.</p><h3>Step-1</h3><p>Go to the link <a href="https://www.salesforce.com/in/?ir=1">Salesforce</a> and click on Free Trial.</p>It takes you to a window where you have to fill in some details about you and sign up.<h3>Step-2</h3><p>You will receive an activation mail for your account which also contains the details of your account and the duration of the trial period. Click on the link in the email to verify your email ID and activate the account.</p><h3>Step-3</h3><p>Again visit the link <a href="https://www.salesforce.com/in/?ir=1">Salesforce</a> and click on login. Give the login credentials which you just created. You will be presented with the screen below.</p><h3><img src="images/environment_setup.JPG" alt="" /></h3><p>You are ready to learn as your environment is set up now. You may click on Take Tour of Salesforce to familiarize yourself with the user interface.</p><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps5" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Sales Cloud</h1>
+
+<div><div><div><div><div><br /><hr /><p>It is a part of Salesforce.com platform which is focused on enhancing the effectiveness of the sales team of an organization and hence increase the amount of sales. It&rsquo;s uniqueness as compared to other sales methods is it provides both the account information of the customer as well as the information gathered from the social platforms about the product and customer. This helps in correctly judging the potential of a sales lead and closing the sales faster.</p><p>Below are the Key <strong>business Goals</strong> achieved by using Sales cloud.</p><ul><li><strong>Close more deals</strong> &ndash; The availability of all the account information as well as product information for customer&rsquo;s needs makes it easier to drive more number of leads to closure.</li><li><strong>Close deals faster</strong> &ndash; Mobile apps and visual design of the workflows for business process approvals makes it faster to close the deals.</li><li><strong>Get more deals</strong> &ndash; Continuous optimization of campaigns depending on the market response and closure interaction with channel partners gets more deals.</li><li><strong>Quicker decisions</strong> &ndash; The availability of reports and dashboards gives a very detailed picture of the business scenario and also increase accuracy of sales forecasting. So the business decisions are taken quickly.</li></ul><h2>Key Features of sales cloud</h2><ul><li><strong>Contact Management</strong>: Gives complete information on customers including previous communications, discussions, key contact numbers and emails.</li><li><strong>Opportunity Management</strong>: It helps create and change quotes in response to sales interaction and deal scenario.</li><li><strong>Salesforce Engage</strong>: Gives alerts on active leads and create personalized campaigns.</li><li><strong>Lead Management</strong>: Helps assign leads to right people and track the campaigns.</li><li><strong>Reports and Dashboards</strong>: Helps create dashboards which can be drilled down for further information. This leads to faster decisions.</li><li><strong>Sales Forecasting</strong>: Gives accurate view of sales forecasting which can be adjusted based on real-time data.</li><li><strong>Workflow and Approvals</strong>: Helps simplify the approval process and automate any business process using visual drag and drop interface.</li><li><strong>Territory Management</strong>: Create different territory models and apply rules on them.</li><li><strong>Files Sync and Share</strong>: Search, share and find files faster. This leads to greater collaboration.</li><li><strong>Sales Performance Management</strong>: Helps create a link between sales data and sales goals. Also easily create the performance summaries.</li><li><strong>Partner Management</strong>: Easily connect with partners and give them a view of sales performance. Easily onboard, train and support sales partners.</li></ul><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps6" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Service Cloud</h1>
+
+<div><div><div><div><div><br /><hr /><p>This part of Salesforce platform is focused on providing support and help to the customers. This helps in retaining the customers, increasing their satisfaction and loyalty. Its uniqueness lies in providing faster service compared to traditional methods, giving individual attention to each customer needs and take a proactive approach to customer issues. That ultimately enhances the customer&rsquo;s experience hence loyalty which in turn creates a good impact on sales.</p><p>Below are the Key <strong>business Goals</strong> achieved by using Service cloud.</p><ul><li><strong> Personalized Service</strong>: Give each customer a good service experience based on their unique problems and history of purchases and complaints.</li><li><strong>Always-on Service</strong> - Make the service available 24/7</li><li><strong>Multi-channel support </strong> - Meet the customers on their preferred channels like mobile, phone, chat etc.</li><li><strong>Faster support </strong> - Managing various service needs from a single console helps in delivering support services faster.</li></ul><p>Below are the <strong> Key Features of service cloud </strong>which make it possible the above business goals.</p><ul><li><strong>Console for Service:</strong> It is a unified platform for managing all cases assigned to an agent so that it can help in prioritizing the tasks at hand. Also help give personalized experience to the customer of each case.</li><li><strong>Knowledge base:</strong> Customer interactions and resolutions are captured and organized in to a knowledgebase. This helps in faster issue resolution.</li><li><strong>Social Customer Service:</strong> As more and more customers connect with the organization through social media, this feature helps deliver service on the social media platform itself without asking the customer to visit separate web pages for interaction.</li><li><strong>Live Agent:</strong> Real-time online help is made available by using this chat service.</li><li><strong>Mobile Platform:</strong> Salesforce1 platform is the mobile platform to manage customer service from any device and any place.</li><li><strong>Service Cloud Communities:</strong> It allows customers to help themselves by helping each other. Many tools are available for self service on various trouble shooting needs.</li></ul><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps7" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Navigating Setup</h1>
+
+<div><div><div><div><div><br /><hr /><p>The Salesforce developer uses the setup area to configure and customize the interface. It is also used to add and support other users, and build various other functionalities. There are many paths to reach the same setup button. In this tutorial we will see the most commonly used setup paths and configurations.</p><p>The Salesforce home page has both classic and modern Lighting user Interface. We are referring the modern lighting interface. All most all the features are available in both the classic and Lighting user interface.</p><h2>Setup Location</h2><p>The setup link is located in the top right corner of the page as shown in the picture below. Clicking on the setup home takes us to the set up home page.</p><img src="images/setup_location.JPG" alt="" /><h2>Setup Home</h2><p>Below page shows the set up home where we see all the options available for the developer to configure and customize the option.</p><img src="images/setup_home.JPG" alt="" /><h2>Setup Options</h2><p>We have the below list of important features which are frequently used in setup activity.</p><table><tbody><tr><th>Setting</th><th>Purpose</th></tr><tr><td><strong>Users</strong></td><td>Create, Remove Users. Manage User profiles and Permissions.</td></tr><tr><td><strong>Company Settings</strong></td><td>Information related to your org. Like - Language, Maps and Locations, Domain etc.</td></tr><tr><td><strong>Security</strong></td><td>Expire Passwords, Access Policies, Session Management and Setup Audit Trails.</td></tr><tr><td><strong>Environment</strong></td><td>Jobs, Logs and Sandboxes.</td></tr><tr><td><strong>Objects and Fields</strong></td><td>Object Manager and Schema Builder.</td></tr><tr><td><strong>User Interface </strong></td><td>App Menu, Custom Labels and Lighting App Builder</td></tr><tr><td><strong>Custom Code </strong></td><td>Custom Metadata Types, Email Services, Remote Access etc.</td></tr><tr><td><strong>Analytics </strong></td><td>Reports and Dashboards</td></tr></tbody></table><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps8" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Salesforce Objects - Standard Objects</h1>
+
+<div><div><div><div><div><br /><hr /><p>The Salesforce Platform stores data in relational tables. The records in these tables contain data for the structure of the platform itself as well as user created data. For example the data about the configuration and settings of an account are already in-built as a relational table. But you can also create your own tables to store data specific to your business like the 'dispatch schedule' for a week assuming you are a courier company.</p><p>These relational tables are roughly referred as API Objects or only objects in salesforce. There are three kinds of Salesforce objects.</p><ul><li><strong>Standard Objects:</strong> The objects already created for you by Slaesforce platform.</li><li><strong>Custom Objects:</strong> These are the objects cerated by you based on your business processes.</li><li><strong>External Objects:</strong> The Objects which you create that map to the data stored outside your organization.</li></ul><p>In this tutorial we will focus on the Standard objects in Salesforce platform.</p><h2>Standard Objects</h2><p>These are the objects which already exist in the Salesforce platform to manage the configurations and settings of the environment. Once you login to the salesforce platform you can see them already available to you.</p><h2>Example</h2><p>The most commonly referred standard object is called the <strong>Account Object</strong>. It is the object which stores the preliminary information about a customer, partner, competitor or another organization. We can explore the account object by following the steps below.</p><h3>Step-1</h3><p>Login to Salesforce platform and follow the link path <strong>Settings -&gt; Setup Home -&gt; Object Manager - Account.</strong></p><img src="images/stnrd_obj_step_1.JPG" alt="" /><h3>Step-2</h3><p>In the next step click on the <strong>Schema Builder</strong>. It shows the complete Account table with field names and data types. Also some fields are marked red which indicated they are mandatory fields to be filled when an account is created.</p><img src="images/stnrd_obj_step_2.JPG" alt="" /><p>Using the similar steps as above we can explore all the standard objects available.</p><h2>Important Standard Objects</h2><table><tbody><tr><th>Object Name</th><th>Meaning</th><th>Usage</th></tr><tr><td><strong> Account</strong></td><td>Represents an individual account, which is an organization or person involved in the business like customers, competitors, partners etc.</td><td>Use this object to query and manage accounts in your organization.</td></tr><tr><td><strong>AccountHistory </strong></td><td>Represents the history of changes to the values in the fields of an account.</td><td>Use this object to identify changes to an account.</td></tr><tr><td><strong> Case</strong></td><td>Represents a case, which is a customer issue or problem.</td><td>Use the Case object to manage cases for your organization.</td></tr><tr><td><strong>Contact </strong></td><td>Represents a contact, which is an individual associated with an account.</td><td>This object is used to manage individuals who are associated with an Account in the organization</td></tr><tr><td><strong>User </strong></td><td>Represents a user in the organization.</td><td>This object is used to query information about users and to provision and modify users in your organization</td></tr><tr><td><strong>Asset </strong></td><td>Represents an item of commercial value, such as a product sold by the company or a competitor that a customer has purchased and installed.</td><td>This object is used to track assets previously sold into customer accounts. With asset tracking, a client application can quickly determine which products were previously sold or are currently installed at a specific account.</td></tr><tr><td><strong>Domain </strong></td><td>Read-only object that represents a custom Web address assigned to a site in your organization.</td><td>This read-only object is used to object to query the domains that are associated with each website in your organization.</td></tr></tbody></table><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps9" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Salesforce Objects - Custom Objects</h1>
+
+<div><div><div><div><div><br /><hr /><p>The organization&rsquo;s data will always not fit into the existing standard objects. So we can extend and customize many sales force objects to meet this need. For example a courier company can create a custom object to store the schedule and dispatch details for every week. So these objects store the data that is unique to the business. The custom objects can also have custom fields along with the standard fields available in Salesforce.</p><h2>Custom Object features</h2><p>Following is a list of features which are available with Custom Objects.</p><ul><li>Build page layouts to control which fields users can view and edit when entering data for the custom object record</li><li>Import custom object records</li><li>Create reports and dashboards to analyze custom object data</li><li>Create a custom tab for the custom object, to display the object&rsquo;s data</li><li>Track tasks and events for custom object records</li><li>Import custom object records</li></ul><h2>Create a Custom Object</h2><p>To create a custom object we go to the below line path as shown in the diagram.</p><img src="images/custom_obj_1.JPG" alt="" /><p>Now we fill in the details of the custom object we want to create. There are mandatory fields which should be filled before the object can be saved. In our case we give the object a name called Delivery schedule and save it.</p><img src="images/custom_obj_2.JPG" alt="" /><h2>Create a Custom Field</h2><p>To Add more granularity to the business data, we can add custom fields on the custom object we created. In this case let's add a field called delivery date to the custom object named Delivery schedule. To do this we follow the path <strong>Setup Home -&gt; Objects and Fields -&gt; Object Manager -&gt; Deliver Schedule</strong>. Then Scroll down to the Fields and Relationship tab and click New. The page to add custom filed appears which we fill in with details shown below.</p><img src="images/custom_obj_3.JPG" alt="" /><p>Next we can verify the successful addition of the above custom field by again following the same link path as above. The custom field appears.</p><img src="images/custom_obj_4.JPG" alt="" /><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps10" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Salesforce Objects - Master Detail</h1>
+
+<div><div><div><div><div><br /><hr /><p>Unlike the relationships in relational database, the relationships in Salesforce are not through Primary and Foreign Keys. The relationships are maintained by using <strong>Relationship Fields.</strong> It is a custom field which links one object record to another. Through the creation of relationships we can display the data of all the related records in the record's details page.</p><p>The <strong>Master Detail</strong> relationship is used when we want to control the display of detail records based on the value in the master record. For example in the courier company model a delivery schedule is always linked to a delivery location. If we remove a delivery location from our list, then all the related delivery schedules should also be eliminated. Such a dependency can be achieved through Master-Detail relationship between the sales force objects.</p><p>Below is an example of</p><h2>Features of Master-Detail Relationship</h2><ul><li>Deleting a Master record, deletes all the detail records.</li><li>A detail record cannot be created without a Master record.</li><li>The permission on the detail record cannot be set. It inherits the permission from the master record.</li><li>The detail record also inherits the sharing rule from master records.</li><li>Both the master and detail records are automatically included in the report record types.</li></ul><h2>Creating Master-Detail Relationship</h2><p>In the courier company example we will consider the relationship between delivery location and delivery schedule. There is a many-to-one relationship between the delivery schedule records and delivery location record.</p><p>Below are the steps followed to create this relationship.</p><h3>Choose the relationship type</h3><p>In setup home find the object named Delivery schedule. In it under the Custom Fields and Relationships related list, click New. Choose the Master-detail Relationship as shown below.</p><img src="images/master_detail1.JPG" alt="" /><h3>Choose the related object</h3><p>In next step select the object with which this relationship will be created. We choose DeliveryLocation</p><img src="images/master_detail2.JPG" alt="" /><h3>Name the relationship and Field</h3><p>In this step enter the Relationship Name as well as the name of the Field.</p><img src="images/master_detail3.JPG" alt="" /><h3>Add field to page layout</h3><p>In the Next step we accept the defaults and move on to add the reference field to the page layout.</p><img src="images/master_detail4.JPG" alt="" /><h3>Add custom related lists</h3><p>Next we specify the title for the related list that is associated layout with the parent</p><img src="images/master_detail5.JPG" alt="" /><p>This completes the creation of Master-Detail relationship between DeliveryLocation and Deliveryschedule</p><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps11" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Salesforce Objects - Lookup Relationship</h1>
+
+<div><div><div><div><div><br /><hr /><p>A Lookup relationship involves finding value of a field based on the value in another field in another object. It is mostly used in the case of commonly shared data between two objects.</p><h2>Example</h2><p>In the courier company, we have a delivery location which must be related to a delivery schedule. So we have a field "DeliverySchedule" in the object Delivery location that looks up for values from the other custom Object named "Delivery Schedule". Below are the steps to create such a lookup relation.</p><h3>Step-1</h3><p>First we identify the objects and the fields which need to have the relationship. IN our example these two objects are <strong>Delivery Schedule</strong> and <strong>Delivery Location.</strong></p><h3>Step-2</h3><p>Create a custom Object named DeliveryLocation following the previous chapter. In it go the tab Fields and relationships. Click <strong>New -&gt; Custom Filed -&gt; Lookup Relationship</strong>. Choose the field type as lookup filed and enter the details as shown below.</p><img src="images/lookup_1.JPG" alt="" /><h3>Step-3</h3><p>You can verify the lookup relationship created by going to the schema builder and choosing the two objects for display.</p><img src="images/lookup_final.JPG" alt="" /><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps12" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Salesforce Objects - Schema Builder</h1>
+
+<div><div><div><div><div><br /><hr /><p>The various objects and their relationships of a Salesforce application can be easily viewed using the Schema builder. And just not viewing, but we can also design, modify and implement new data models using schema builder.</p><p>Schema builder has a drag and drop interface which is used to do all these activities. It shows all the relevant details like - field values, data types, relationship with directions etc.</p><h2>Accessing Schema Builder</h2><p>From Setup Home navigate to <strong>Objects and Fields -&gt; Object Manager -&gt; Schema Builder </strong>.</p><img src="images/schema_builder.JPG" alt="" /><h2>Viewing Objects</h2><p>We can see the various objects by selecting them form the left pane. The <strong>Element</strong> tab represents fields and relationships while the <strong>Objects</strong> tab represents the standard as well as custom objects.</p>IN the diagram below we have selected the three object named - Account, Delivery Schedule and Delivery location. <img src="images/schema_builder_1.JPG" alt="" /><h2>Changing Objects</h2><p>We can work on various schema objects by showing them in the canvas in the right pane. We can only modify the custom objects and cannot modify the standard objects as they are part of the Salesforce platform structure.</p><p>Below we see various actions we can take on the custom schema objects.</p><img src="images/schema_builder_2.JPG" alt="" /><h2>Creating Objects</h2><p>We can create new objects using schema builder. Go the <strong>Elements</strong> tab. Drag the element named <strong>Object</strong> into the canvas. It prompts you to fill in the details of the object.</p><img src="images/schema_builder_3.JPG" alt="" /><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps13" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Data Security - Control Access Org</h1>
+
+<div><div><div><div><div><br /><hr /><p>In an organization, different kinds of data are accessible by different types of users. So Salesforce has mechanism to limit the data access in the platform to both individual users as well as groups of users. There is a flexible but layered sharing model that makes it easy to assign different data sets to different sets of users. Also the access can be defined at the level of organization, objects, fields, or individual records.</p><h2>Levels of Data Access</h2><p>There are four levels of data access.</p><ul><li><strong>Organization Level: </strong>It is created by maintaining a list of authorized users, setting password policies, and limiting login access to certain hours and certain locations. Objects</li><li><strong>Objects Level: </strong>It is done by setting permission on a particular object by allowing selective viewing, editing or deleting of nay object in that record.</li><li><strong>Fields Level:</strong> It is used to restrict access of users to certain fields even when the user has access to the object containing the field.</li><li><strong>Records Level:</strong> This access level permits the user to access only certain records of an object.</li></ul><p>In this chapter we are going to focus on Control Access to the Organization using the three mechanisms described below.</p><h2>Create and Manage Users</h2><p>The administrators can create one or many users using the admin interface. Navigate to <strong>setup home -&gt; Administration -&gt; Users</strong>. It shows the options for adding one user or many.</p><img src="images/create_users.JPG" alt="" /><p>It further asks for details of each users like Name, email Address, Role, Profile etc. On filling those details the users get created.</p><h2>Set Password Policies</h2><p>Password policies refer to the way the passwords are managed in the organization. For example setting the expiry date of a password, the complexity requirement of a password and so on. All these options are customizable and we can also control the lock out policies. These password polocies are set by navigating to <strong>setup home -&gt; Security -&gt; Password Policies.</strong></p><img src="images/password_policies.JPG" alt="" /><h2>Restricting Access from IP address</h2><p>This is an added security which allows only specific range of IP addresses to access the Salesforce platform of the organization. But if a valid user accesses the restricted page outside the trusted IP range then the system asks for additional challenge questions which should have been already configured. This is set by navigating to <strong>setup home -&gt; Security -&gt; Network Access.</strong>.</p><img src="images/restrict_ip.JPG" alt="" /><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps14" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Data Security - Control Access Objects</h1>
+
+<div><div><div><div><div><br /><hr /><p>The access restriction for different objects is managed by using profiles and permissions. The type of access (view, edit, create etc) is also customized thorugh this mechanism. A user can have only one profile, but can have multiple permission sets. So through profiles th eminimum basic permissions for the selected objects is granted whie, through permission sets additional permisssions beyond the profile can be granted.</p><p>Lets see the details of the profiles creation and granting permission to underastand how the object access is managed.</p><h2>User Profiles</h2><p>Profiles are cerated to address a the requirements of a particular business fuinction. For example the HR department needs a profile which will have access to work histrory,medical histroty and attendance of employees. While the finance department will need profile which will access the attendance and remuneration details of an emplyee. So depending on the users's job role the profile is attached to the user. AN user can have only one profile allocated.</p><h3>Creating a Profile</h3><p>Go to the link path <strong>Setup HOme -&gt; Users -&gt; Profiles</strong>. You can see some existing profiles which are pre-built in salesforce platfrom. We can create new profiles by cloning the existing profiles and customizing them further as per the need.</p><img src="images/user_profiles.JPG" alt="" /><p>Let us have a closer look at the existing profile named standard user. It shows all the types of settings available to this profile. For example we can set object permissions for both standard objects as well as custom objects. We can aslo set different administrative permissions and general user permissions and so on.</p><img src="images/edit_profile.JPG" alt="" /><p>In order to control the permission to each of th eobejcts through this profile we can scroll doen and find the list of both standard objects and custom objects. Here we can use the check boxes to customize the <strong>object access</strong></p><h3>Assigning a Profile</h3><p>Once a new profile has been cerated, it can be assigned to users by going to the link path <strong>Setup Home -&gt; Users -&gt; Users </strong> and the click on the edit to the left of the user name. It brings up a new window in which we can change the profile from the drop down.</p><img src="images/edit_profile_2.JPG" alt="" /><h2>Permission Sets</h2><p>Permission sets are additionl acceses given to a user on some objects which are not covered through their profiles. So it just extends users access to some objects based on their profiles. For exmaple when some new custom object is created, we create a permission set for those objects and attach thoe permission sets to the users who will need access to those objects. The same logic applies when we want to grant temporary access to some objects for a user.</p><h3>Creating a Permission Set</h3><p>We create a permission set by going the link path <strong>Setup Home -&gt; Users -&gt; Permission Sets.</strong>. Click on the <strong>New</strong> button to create a new permission set.</p><img src="images/create_permi_set.JPG" alt="" /><p>Once cerated we can edit the permission set and choose <strong>Object settings</strong>. Here we can see the list of objects and the level of access to these objects. We can edit the access types for each of these objects.</p><img src="images/edit_permi_set.JPG" alt="" /><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps15" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Data Security - Control Access Fields</h1>
+
+<div><div><div><div><div><br /><hr /><p>There are scenarios in which we grant access to an object to a uiser but we also want to restrict the access to certain fields of that object. So using field level security we can control the user's access to see, edit or delete certain fields of an object.</p><p>Field level access settings are achieved in two ways.</p><ul><li>Edit a single permission set or profile containg all the fields which needs access restriction.</li><li>Edit permission on a single field to be applied in multiple profiles.</li></ul><h3>Example</h3><p>To give edit access to the field DeliverySchedule on the object DeliveryLocations we go to the permission set named <strong>CourierObjects</strong> which we created in last chapter. Then go to Object settinngs and choose the object named DeliveryLocations. Click Edit and select the field on which we need to give set the permission.</p><img src="images/field_edit_permi_set.JPG" alt="" /><p>To set the field permission for one field across all profiles we open the object through schema builder and then right click on the specific field, choose manage <strong>Manage Field Permissions</strong>. Then we get the optiom to set the field permissions for many profiles for this single field.</p><img src="images/field_edit_permi_set2.JPG" alt="" /><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps16" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Data Security - Control Access Records</h1>
+
+<div><div><div><div><div><br /><hr /><p>Many times, beyond the access restriction for the objects and fields, we also need to restrict access to certain records of an object. This requires setting up of access restriction for a user based on the values in the records.</p><h2>Record Ownership</h2><p>A unique feature of Salesforce is the ownership of every record stored. Every record in every object has a field which marks the ownership of that record. A user who needs access to this record becomes part of the profile which is same as the profile of the owner of that record.</p><h2>Restriction Mechanism</h2><p>As access is granted at multiple levels like Object, field and records, there will be situation where there is conflict between the access levels. There may be a read access on a record but the object containing it might not have read access for a user. In such case the aceess type which is more restrictive (gives less access) will be applied. So a record without access permission will remain inaccessible even when the object conttaiing it it accessible and an Object without access permissions will remain inaccessible even when it has some records to which the user has read access.</p><h2>Record Sharing Mechanism</h2><p>The Saleforce paltfrom provides four distinct mechanisms to share the records of an object with the users.</p><ul><li><strong>Organization-wide defaults</strong></li><li><strong>Manual sharing</strong></li><li><strong>Role hierarchies</strong></li><li><strong>Sharing rules</strong></li></ul><h3>Organization-wide defaults</h3><p>In this mechanism, a minimal access level is cerated and granted to all the users. So every user who is part of the organization, gets access to these records. Then the access for additional records is customized by clubbing the users into role hierarchies, sharing rules and also through manual sharing with each of the user.</p><p>There are four types of sharing models which implement the Organizaation-wide default settings.</p><table><tbody><tr><th>Settings</th><th>Result</th></tr><tr><td><strong>Public Read/Write</strong></td><td>All users can view, edit, and report on all records.</td></tr><tr><td><strong>Public Read Only</strong></td><td>All users can view and report on records but not edit them. Only the owner, and users above that role in the hierarchy, can edit those records.</td></tr><tr><td><strong>Private</strong></td><td>Only the record owner, and users above that role in the hierarchy, can view, edit, and report on those records.</td></tr><tr><td><strong>Controlled by Parent</strong></td><td>A user can perform an action (such as view, edit, or delete) on a contact based on whether he or she can perform that same action on the record associated with it.</td></tr></tbody></table><h3>Manual sharing</h3><p>In this access model the record owners give the read and edit permissions to specific users. So it is a manual process in which individual or group of records are handled by the record owners. also It has to be done fo reach user profile that needs the access.</p><p>In the next two chapters we are going to see Role hierarchies and Sharing rules.</p><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps17" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Data Security - Create a Role Hierarchy</h1>
+
+<div><div><div><div><div><br /><hr /><p>Role hierarchy is a mechanism to control the data access to the records on a salesforce object based on the job role of an user. For example a manager needs access to all the data that his reportees have, but the employees have no access to the data that is only owned by their manager. In this manner the access model looks similar to the org chart in an organization but it need not be exactly same as the Org chart.</p><p>The role hierarchy <strong>automatically grants record access</strong> to users above the record owner in the hierarchy.This option is enabled for all objects by default. To change this, we take help of custom objects and manual acees grants.</p><h2>Defining a Role Hierarchy</h2><h3>step-1</h3><p>To create a Role Hierarchy we go to the link path <strong>Setup Home -&gt; Users -&gt; Roles -&gt; Setup Roles</strong>. The default role heirarchy appears as shown below.</p><img src="images/role_heirarchy_2.JPG" alt="" /><p>The default view is tree view, which is easiest to use. The other two views are sorted list view and list view. You can change this view as per your need.</p><h3>step-2</h3><p>In the next step we add a role to the exitsing heirarchy by fillign in the role details. Click on <strong>Add Role</strong>. The next window appears asking for the following details.</p><img src="images/role_heirarchy_3.JPG" alt="" /><p>While filling these details we also take care to define if the users can only view the opportunities or can aslo edit the opportunities. On clicking save we get the Role cerated as shown below.</p><img src="images/role_heirarchy_4.JPG" alt="" /><h3>step-3</h3><p>Next you can assign users to the roles. Click on <strong>Assign Users to Role</strong>. It brings up a window where you can select All users form the drop down and move users from the left box to the right box.</p><img src="images/role_heirarchy_5.JPG" alt="" /><p>In this way you can create roles within the role hierarchy and add users to them. So the users can have access to the objects and data as per their roles.</p><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps18" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Data Security - Define Sharing Rules</h1>
+
+<div><div><div><div><div><br /><hr /><p>Though we cann manage the access to different objects and records through organization-wide settings and Role heirarchies, we come across situations in which some exception is required. We want to grant access to some data to some specific users which are not able to access the required data because of their roles. For example to see the case history when a user has only acess to the current case details. In such scenarios we take help of sharing rules. Through this mechanism, we cerate a public gruop which will accomodate all the users who need such exception and then add sharing rules to such a group</p><h2>Steps to Create Sharing Rules</h2><h3>Step-1</h3><p>Create a public group which will have the users who need the specific access. Go to the link path <strong>Setup home -&gt; Users -&gt; Public Groups -&gt; New Group</strong>. We fill in the below details. Also choose the group of users who will need to use the sharing rules. Keep the Grant access using Heirarchies checked so that other users below in this heirarchy can inherit the access. Click Save.</p><img src="images/sharing_rule_group.JPG" alt="" /><h3>Step-2</h3><p>Now we cerate the sharing rule for the above public group. Go to the link path <strong>Setup Home -&gt; Security -&gt; Sharing settings</strong>. For the drop down Manage Sharing settings for , choose Campaigns.</p><img src="images/sharing_rule_1.JPG" alt="" /><p>Then under Campaign sharing rules, click on the button New. Provide the details for the new sharing rule as shown below. We select a critera to give access to records for which the value of the field Campaign name is camp_x.</p><img src="images/sharing_rule_2.JPG" alt="" /><p>So now all the users under the newly cerated public group will get access to those records of campaign object where the campaign name is camp_x.</p><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps19" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Process Builder - Automate Business Processes</h1>
+
+<div><div><div><div><div><br /><hr /><p>The process builder tool helps in automating business processes. For example when a record when a courier delivery is completed. This automation involves creating the following three steps.</p><ul><li>Select an Object to start the process.</li><li>Add criteria to the object to allow the start of the process.</li><li>Add action to the criterial to trigger the execution of the process</li></ul><p>lets cerate a sample process which will add a record when the courier deliveyr is completed.</p><h3>Add object to start the process</h3><p>Go to the link <strong>Setup home -&gt; Platfrom Tools -&gt; Process Automation -&gt; Process Builder </strong>. Click New . The following window appears which asks for name of the process and description. We fill in the details as shown and click Save.</p><img src="images/proc_build_1.JPG" alt="" /><p>Next we get a process sutomation window. click new to go to the next step. And choose the Object delivery schedule as shown below. Click Save.</p><img src="images/proc_build_2.JPG" alt="" /><h3>Add Criteria</h3><p>Click on the Add Criteria button in the canvas to add a condition for the process to be allowed to execute. Here we choose the delivery date as the filed which when updated will trigger the process. Click save to save the criteria.</p><img src="images/proc_build_4.JPG" alt="" /><h3>Add Action</h3><p>Next we add action to trigger the start of the process when the condition is met.</p><img src="images/proc_build_5.JPG" alt="" /><p>With this setup when a courier delivery is completed we are able to create a record to track the completion of the delivery.</p><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps20" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Process Builder - Importing Data</h1>
+
+<div><div><div><div><div><br /><hr /><p>Salesforce provides a robust platform for data manipulation. We can insert, view, edit and delete the relevant data with proper user permissions. But many times we see the need of adding large number of records to the respective saleforce object in one go. Most likely these records have come form another source. The format of the incoming data has to match with the format in which the salesforce object is expecting it.</p><p>The import feature is available with CSV file structures from four sources. They are - CSV, Outlook CSV, ACT! CSV and GMail CSV. In our example below we will use the normal csv file for importing data to the salesforce platfrom.</p><p>The import happens in the following three steps.</p><h3>Step-1</h3><p>Navigate to <strong>Setup Home -&gt; Data -&gt; Data Import Wizard</strong>. A page opens which gives some instruction about how to proceed with the wizard. The most importan tpoint to remember is the record limits which restricts the numberof records to be imported in one go to 50000. Click the Launch Wizard button to start the import process. The below screen appears, asking us to choose the kind of object to which we can import the data.</p><img src="images/data_import_1.JPG" alt="" /><p>We select Accounts and contacts in the above screen and click Next.</p><h3>Step-2</h3><p>In this step we choose the file containng the data to be imported. Also we are presented with the option of Adding new records or updating the existing records or both. We choose adding the new records as shown below.</p><img src="images/data_import_2.JPG" alt="" /><p>We also select the field use to match the existing record with the incoming record. For this we choose Account name and site under the dropdown Match Account by. Then we click Next.</p><h3>Step-3</h3><p>This is the last step before the import starts. In this step we do the very important task of matching the incoming field names with the column names of the salesforce fields. Though Salesforce does automatic matching of most of the field names, still there may be some cases where we have to macth the field names manually. As you can see below we have unmapped fields which needs to be mapped. On sucessfully completing the mapping, click Next and the import starts.</p><img src="images/data_import_3.JPG" alt="" /><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps21" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Process Builder - Exporting Data</h1>
+
+<div><div><div><div><div><br /><hr /><p>The exportig of data form Salesforce is even more straight forward than the importing. You can choose the objects from which data needs to be exported and aslo schedule a regular export form those objects.There is also a filtering option on how much data to export based on the age of the record.</p><p>Below are the steps to do an export.</p><h3>Step-1</h3><p>Navigate to the link <strong>Setup Home -&gt; Data -&gt; Data Export</strong>. It will present a window to schedule a export by mentioing the frequency along with the start and end date to select the records to be exported.</p><img src="images/data_export_1.JPG" alt="" /><h3>Step-2</h3><p>In the next step we choose the salesforce objects whose data needs to be exported by selecting the check boxes as shown below.</p><img src="images/data_export_2.JPG" alt="" /><h3>Step-3</h3><p>Clicking next in the above step brings a window which mentions that you have to wait for some time for the exported data to be ready for download. So in this step we wait for the download link to appear in the same screen. Also a hyperlink to download the data is sent to the email id of the person who scheduled the export.</p><img src="images/data_export_3.JPG" alt="" /><h3>Step-4</h3><p>Finally the download links</p><img src="images/data_export_4.JPG" alt="" /><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps22" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Process Builder - Reports</h1>
+
+<div><div><div><div><div><br /><hr /><p>Creating rpeorts in salesforce is a very straight forward process. The reports are created on top of one or more salesforce objects. It has the flexibility of applying filters and joining data sets to create sophisticated reports. The interface is called <strong>Report builder</strong>.</p><p>Go to the <strong>Reports icon</strong> in the left bar menu of the Lightning experience home page. Follow the steps below to cerate a report.</p><h3>Step-1</h3><p>Click on <strong>Create new report</strong>. The below screen appears. We choose <strong>Accounts</strong> and click create.</p><img src="images/Reports_1.JPG" alt="" /><h3>Step-2</h3><p>In the next step we define some settings for the report and get the resulting rows. Here we are choosing "My Accounts" for the dropdown named Show. It brings all the records owned by the cerator of the report. Next we choose the created date filter as "All Time" as shown below. Then we save the report with a name "Accountns report".</p><img src="images/Reports_2.JPG" alt="" /><h3>Step-3</h3><p>In the next step we apply a filter to the above report. Click on the Add filter option in the white space just below the date filed filter. Choose the field <strong>Billing State/Provinces.</strong> Choose the equal to operator and type the value NY in the next text box. This filters out the row for NY as shown below.</p><img src="images/Reports_3.JPG" alt="" /><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps23" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Process Builder - Dashboards</h1>
+
+<div><div><div><div><div><br /><hr /><p>Dshboards provide more insights than reports as they combine the data from many reports and show a summarized result. Looking at many reports at a time gives the flexibility of combining the results from them quickly. Also summaries in dashboards help us decide on action plans quicker. The dashboards can contain charts, graphs and Tabular data.</p><p>Below is the steps to create a dashboard.</p><h3>Step-1</h3><p>Go to the Dashboard button on the left menu bar in the Salesforce home page. Then click on the New Dasboard and the following window comes up. Fill in the name and description.</p><img src="images/dashboard_1.JPG" alt="" /><h3>Step-2</h3><p>Next we add a components to the dashboards. Components are graphical objects which present the summarized or tabular data with visual indicators like colors etc. In our case we add two components as shown below.</p><p>Choose the Opportuity Amount by Stage report and present it as a line chart.</p><img src="images/dashboard_2.JPG" alt="" /><p>Similarly we choose another component to be added. Choose the report Leads converted All Time as shown below.</p><img src="images/dashboard_3.JPG" alt="" /><h3>Step-3</h3><p>Next we see both the components are visible in the dashboard. We can resize the components for better visibility. And there is still more place for additional components.</p><img src="images/dashboard_result.JPG" alt="" /><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps24" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Process Builder - Using Formula Fields</h1>
+
+<div><div><div><div><div><br /><hr /><p>Many times we need to manipulate the values of the fields stored in the sales force object by applying some conditions or calculations. For example we need to get the Account number value linked to the contact object, so that we can find the Account number formt he contact name.</p><p>In such scenarios we cerate formula field in addition to the existing fields in the object. Below are the steps to create formula field.</p><h3>Step-1</h3><p>Go to the link path <strong>Setup Home -&gt; Object Manager -&gt; Contact</strong>. Then scroll down to the Fields and Realtions tab and add New. Choose Formula as the data type and click next. the below window appears. Here we choose the return type as Text and also fill in the Field Name and Field Label.</p><img src="images/formula_field_3.JPG" alt="" /><h3>Step-2</h3><p>Clicking on next brings next window where we have to select the field based on which the formula will be built. Lets choose Account number from the Account table. Click Insert to insert this field into the Contact object.</p><img src="images/formula_field_4.JPG" alt="" /><h3>Step-2</h3><p>Finally we are able to see the field Account number Appear under the fields of the Contact objject as shown below.</p><img src="images/formula_field_5.JPG" alt="" /><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps25" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Visualforce - Visualforce Pages</h1>
+
+<div><div><div><div><div><br /><hr /><p>Visualforce pages are Saleforces own webapges using a unique tag-based Mark-up languiage. It is similar to HTML but it's primary use is to access, display and update the organization&rsquo;s data. The page is accessed by using a URL simialr to that of a tradiitonal webserver page.</p><p>Each tag in visual force language corresponds to some user interface component like section of a page, a list view or a field of an object. Interestingly, it can be easily mixed up wtih HTML markup, CSS style and Java libraries etc.</p><h2>Creating a Visualforce Page</h2><p>Go to the link <strong>developer console -&gt; File -&gt; New -&gt; Visualforce page</strong>. The new window opens askign for a page name. Lets call it HelloworldPage. Next we write the code as shown in the below diagram.</p><img src="images/vf_page_1.JPG" alt="" /><p>Click Save. Then click on Preview. This opens a new webpage showing the result as below.</p><img src="images/vf_page_2.JPG" alt="" /><h2>Adding components</h2><p>Let's add some user interface components to the above program created. We add a block and a section in that block by using the following code.</p><img src="images/vf_page_3.JPG" alt="" /><p>On previeweing the page we get the following output.</p><img src="images/vf_page_4.JPG" alt="" /><h2>Setting Prefernces</h2><p>We can set the various settings for easy navigation by going to Help-&gt;Prefernces.</p><img src="images/vf_page_5.JPG" alt="" /><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps26" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Visualforce - Variables & Formulas</h1>
+
+<div><div><div><div><div><br /><hr /><p>The data from the salesforce objects can be brought into the visualforce page using variables amd expressions. Like other normal programming language the visualforce language has expressions, operators and literals etc. The basic building block of this language is expressions.</p><p>The syntax of a visualforce expression is as below.</p><pre>{! expression }</pre><h2>Example</h2><p>Lets use the global variable $user. We can write the following code to get the user name First name and login name.</p><img src="images/vf_variables_expressions.JPG" alt="" /><p>On previeweing the output, we get the following details.</p><img src="images/vf_variables_expressions2.JPG" alt="" /><p>Similarly we can use many other variables and manipulate them using formula as shown in the code below.</p><img src="images/vf_variables_expressions3.JPG" alt="" /><p>On previeweing the output, we get the following details.</p><img src="images/vf_variables_expressions4.JPG" alt="" /><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps27" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Visualforce - Standard Controllers</h1>
+
+<div><div><div><div><div><br /><hr /><p>Visualforce consist of many built-in controllers which can be used to access and display data. It works on the MVC (model-view-controller) approach. The controllers intrecat with the database and pull the data fromthe database to view the data through a webpage created by apex page.</p><p>To display a specifric record or group of records we need the record ID. When intergrated with other visualforce pages the ID can flow to the controller page automatically. But in a stand alone page we need to specofy the record ID manually to see the controller working.</p><h2>Example</h2><p>Lets create a visualforce page to get the summary of a record in the Contact Object. To do this we use the component called <strong>standardController</strong> and put it in a apex block. The below diagram shows the code to achieve this.</p><img src="images/vf_s_controller_1.JPG" alt="" /><p>Here we dispaly some select fields from the Object. They are Name, Email and phone. If we go to the preview window, we find that the page only displays the labels but no data. That is because we have not associated the result from the controller with any specific record.</p><p>So next we identify a record form the <strong>Contact Object</strong> to be attached to the result form the controller. Open the contacts object and click on any of contact name. It will open the following window from which we capture the ID of the record. The ID is higlighted in the URL. In your environment it will be a similar string of characters.</p><img src="images/vf_s_controller_2.JPG" alt="" /><p>Finally we add this ID of the record to the YRL of the preview window of the visualforce standrad controller page we created. In the current example the ID of the record is added as shown below.</p><pre>https://c.ap2.visual.force.com/apex/FirstPage?core.apexpages.request.devconsole=1&amp;id=0032800000Wih9kAAB</pre><p>On visiting the above URL from the Organization's salesforce accoutn we get the details of the record as shoen below.</p><img src="images/vf_s_controller_3.JPG" alt="" /><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps28" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Visualforce - Records, Fields & Tables</h1>
+
+<div><div><div><div><div><br /><hr /><p>We have already seen how to get the values of a record using the standrad controller. But we can aslo display the field values in a more formatted way by using additional controllers. In this chapter we see how to display the fields of an object and a the data of a details table in a Master-detail relation.</p><h2>Display Fields</h2><p>When we want to display the fields of a record in a formatted manner with column headers, rather than just the labels and values, we can use the <strong>OutputField</strong> option. The below code shows the apex program to display the firled data from Contact. As you can see we do not need the labels to be in place to indicate the field values.</p><img src="images/vf_s_record_fields_tables_code.JPG" alt="" /><p>To preview the result of the above coe we use the ID of the record as described in the previous chapter. The result shows the following output showing the field values of the records along wiht column headers.</p><img src="images/vf_s_record_fields_tables1.JPG" alt="" /><h2>Display Tables</h2><p>W can display all the records of a details table by taking a value from a master table. For example we can diaplay all the contacts associated with an account. In such case we use the <strong>iteration component</strong> which in pur case is the contacts table linked to account. Below is the code to display all the contacts associated with the Account table.</p><img src="images/vf_s_record_table_code.JPG" alt="" /><p>On previeweing the putput form the above code we get the below result.</p><img src="images/vf_s_record_table_result.JPG" alt="" /><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps29" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Visualforce - Using Forms</h1>
+
+<div><div><div><div><div><br /><hr /><p>Salesforce is a data driven platfrom. So vieweing and editing data in it's apps is a fundamental requirement. Like the traditional HTML forms we can create similar forms in saleforce for editing the data in salesforce. It is achieved by using the standard controller with the component named</p><h3>Creating Input Form</h3><p>The Input forms are cretaed using a visualforce page. We open a new visualforce page by using the path <strong>Developer Console -&gt; File -&gt; New -&gt; Visualforce Page</strong>. We write the code as shown below which uses <strong>Contact</strong> as the standard controller and the purpose is to edit the values in the 3 fields - Name, Email and Phone.</p><img src="images/visulaforce_forms_code_1.JPG" alt="" /><p>On running the above code for the visualforce page the output we get is as below.</p><img src="images/visulaforce_forms_result_1.JPG" alt="" /><p>But we can improve the above form further by aligning the fields to one column and putting all the input fields and labels in to a block. The below code shows how we are a section and block to thte form and also puttign the fields in one column.</p><img src="images/visulaforce_forms_code_2.JPG" alt="" /><p>On running the above code for the visualforce page the output we get is as below.</p><img src="images/visulaforce_forms_result_2.JPG" alt="" /><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps30" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Visualforce - List Controllers</h1>
+
+<div><div><div><div><div><br /><hr /><p>Many times we need to view a given set of records from an salesforce object applying some filter criteria. This is achieved by using list controllers which allow you to create Visualforce pages that can display or act on a set of records. The standard list controllers can be used in the following set of objects.</p><ul><li>Account</li><li>Asset</li><li>Campaign</li><li>Case</li><li>Contact</li><li>Contract</li><li>Idea</li><li>Lead</li><li>Opportunity</li><li>Order</li><li>Solution</li><li>User</li><li>Custom objects</li></ul><h2>Example</h2><p>We take the example of contact object. We fetch the records from this object and display it using list controllers. To achieve this we create a apex page with the following code. The code creates a pageblock with column values matching the column names of the contact object.</p><img src="images/vf_list_controllers.JPG" alt="" /><p>On running the baove code we get the put put as shown below.</p><img src="images/vf_list_controllers_result.JPG" alt="" /><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps31" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Visualforce - Static Resources</h1>
+
+<div><div><div><div><div><br /><hr /><p>The user interface in a visualforc ebase can display dynamic content whose value keeps chaning based on user responses. But there are times when we need some content which should not change with change in th evalues of other components in th page. For example a image file may be required to remain constant. Such unchanging content in a page are know as static resourcess. The list of static resources used in Salesforec are below.</p><ul><li>Images</li><li>Javascript Files</li><li>Flash files</li><li>CSS files</li></ul><p>The steps to create a static resource are as below.</p><h3>Create a Static Resource container</h3><p>Go to <strong>Develop -&gt; Static resource </strong>and mention the values for name, description and file location for the static resource.</p><img src="images/startic_resource_1.JPG" alt="" /><h3>Upload a Static Resource</h3><p>Click save in the above screen to get the file attached to the user interface controller.</p><img src="images/Static_resource.JPG" alt="" /><h3>Reference the Static Resource</h3><p>Next we create the apex code below to reference the static object we created above.</p><img src="images/startic_resource_code.JPG" alt="" /><h3>Output</h3><p>Running the above apex code gives us the below result which shows the static resource.</p><img src="images/startic_resource_result.JPG" alt="" /><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+
+
+
+<div data-role="page" id="eps33" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Lightning Components - Create & Edit Lightning Components</h1>
+
+<div><div><div><div><div><br /><hr /><img src="images/lighting_comp_1.JPG" alt="" /><img src="images/lighting_comp_compenet.JPG" alt="" /><img src="images/lighting_comp_2.JPG" alt="" /><img src="images/lighting_comp_result.JPG" alt="" /><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+<div data-role="page" id="eps34" data-theme="e">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+
+<h1>Lightning Components - Attributes & Expressions</h1>
+
+<div><div><div><div><div><br /><hr /><img src="images/lightning_var_attr_comp.JPG" alt="" /><img src="images/lightning_var_attr_app.JPG" alt="" /><img src="images/lightning_var_attr_result.JPG" alt="" /><hr /></div></div></div></div></div>
+
+
+
+</div>
+</div>
+<div data-role="footer" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		<a href="#pageone" data-rel="back" data-icon="home" data-iconpos="" data-shadow="true" data-iconshadow="true">Back</a>
+	</div>
+	</div> <!-- /page -->
+
+
+</body>
+</html>
